@@ -1,9 +1,7 @@
 ---
-name: Jupyter Sandbox
+name: Code Server
 category: Interactive Apps
-subcategory: Servers
+subcategory: BioHive Applications
 role: batch_connect
 description: |
-  This app will launch a [Jupyter] server on the BioHive cluster.
-
-  [Jupyter]: https://jupyter.org/
+  This app will launch a VS Code server using Code Server on the BioHive cluster.

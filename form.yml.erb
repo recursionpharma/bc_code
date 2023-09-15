@@ -4,29 +4,34 @@
   }.map(&:name).grep(/^P./)
 -%>
 ---
-cluster:
-  - "slurm"
+cluster: "slurm"
 form:
   - bc_queue
-  - mode
-  - cuda_version
-  - version
   - bc_num_hours
   - num_cores
+  - gpu_type
+  - num_gpus
   - memory
-  - modules
-  - extra_jupyter_args
-  - bc_account
-  - bc_num_slots
-  - classroom 
+  - account
+  - working_dir
+  - version
 attributes:
-  cluster: "slurm"   
-  modules: "python"
-  cuda_version: "cuda11.8/toolkit/11.8.0"
-  classroom: 0
-  version: "3.1"
-  bc_account: null
-  bc_num_slots: null
+  gpu_type:
+    label: GPU Type
+    widget: select
+    options:
+      - ["none", "none"]
+      - ["a100", "a100"]
+      - ["1080ti", "1080ti"] 
+      - ["v100", "v100"]
+    class: "gpu-selection"
+  num_gpus:
+    widget: "number_field"
+    label: "Number of GPUS"
+    value: 0
+    required: true
+    help: "Specify the number of gpus for the job"
+    class: "gpu-count-field"
   bc_queue:
     label: Slurm Partition
     widget: select
@@ -34,7 +39,6 @@ attributes:
       - ["batch", "batch"]
       - ["interactive", "interactive"]
       - ["mem", "mem"]
-  extra_jupyter_args: ""
   bc_num_hours:
     widget: "number_field"
     label: "Number of Hours"
@@ -58,11 +62,7 @@ attributes:
     min: 1
     max: 32
     required: true
-    help: "Specify the amount of memory in MB. Min: 1GB - Max: 32GB"
-  mode:
-    widget: "radio"
-    value: "1"
-    options:
-      - ["Jupyter Lab", "1"]
-      - ["Jupyter Notebook", "0"]
-  
+    help: "Specify the amount of memory in MB. Min: 2GB, Max: 32GB"
+  account: null
+  version: "4.9.1"
+  working_dir: null
