@@ -1,3 +1,6 @@
+[![scorecard-score](https://github.com/recursionpharma/octo-guard-badges/blob/trunk/badges/repo/bc_code/maturity_score.svg?raw=true)](https://infosec-docs.prod.rxrx.io/octoguard/scorecards/bc_code)
+[![scorecard-status](https://github.com/recursionpharma/octo-guard-badges/blob/trunk/badges/repo/bc_code/scorecard_status.svg?raw=true)](https://infosec-docs.prod.rxrx.io/octoguard/scorecards/bc_code)
+[![team-status](https://github.com/recursionpharma/octo-guard-badges/blob/trunk/badges/team/information-technology/team_status.svg?raw=true)](https://infosec-docs.prod.rxrx.io/octoguard/team-reports/information-technology)
 # Batch Connect - OSC Code Server
 
 ![GitHub Release](https://img.shields.io/github/release/osc/bc_osc_codeserver.svg)
